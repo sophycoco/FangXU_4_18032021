@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 0;
     background: #FFF;
     overflow-x: hidden;
@@ -91,6 +92,7 @@ a:hover {
 }
 
 .texture-paper::before {
+    content: "";
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
 }
@@ -284,7 +286,8 @@ a:hover {
 }
 
 #bloc-1-hero h1 {
-    font-size: 32px;
+    font-size: 55px;
+    font-weight: 800;
 }
 
 .navbar {
@@ -302,7 +305,7 @@ a:hover {
 }
 
 .navbar-brand img {
-    max-height: 200px;
+    height: 50px;
     margin: 0 5px 0 0;
     display: inline;
 }
@@ -325,7 +328,7 @@ a:hover {
 .nav > li {
     float: left;
     margin-top: 4px;
-    font-size: 16px;
+    font-size: 26px;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -480,7 +483,7 @@ button {
 }
 
 .icon-lg {
-    font-size: 60px!important;
+    font-size: 80px!important;
 }
 
 .sm-shadow {
@@ -677,7 +680,14 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 20px;
+}
+
+.text-center__text {
+    font-size: 25px;
+    width: 55%;
+    margin: auto;
+    padding-bottom: 15px;
 }
 
 .tight-width-whitespace {
@@ -701,16 +711,13 @@ p {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: auto;
+    /*display: flex;
+    text-align: center;*/
 }
 
 h2 {
-    font-size: 22px;
-    line-height: 1.4em;
-}
-
-h3 {
-    font-size: 15px;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
@@ -720,14 +727,6 @@ h3 {
     max-width: 800px;
     margin: auto auto auto auto;
     box-shadow: 0px 0px 0px #000000;
-}
-
-h1 {
-    color: #333333!important;
-}
-
-h4 {
-    color: #333333!important;
 }
 
 .icons {
@@ -748,6 +747,9 @@ h4 {
     margin-top: 50px;
 }
 
+.quote {
+    font-size: 21px;
+}
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
@@ -759,6 +761,7 @@ h4 {
 
 .bold-link {
     font-weight: 900;
+    font-size: 22px;
     text-decoration: underline!important;
 }
 
@@ -770,22 +773,33 @@ h4 {
     background-color: #364577;
 }
 
-.bgc-atomic-tangerine {
-    background-color: #F3976C;
+.tc-white {
+    color:   #eeeee4!important;
+}
+.bloc5 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
 }
 
-.tc-white {
-    color: #F3976C!important;
+.text-center--bloc {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 800;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
-    color: #FFFFFF!important;
+    background:  #6A2D25;
+    color: #eeeee4!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #80701E!important;
+    color: #eeeee4!important;
+}
+
+.bgc-atomic-tangerine {
+    background:  #6A2D25;
 }
 
 .ltc-white {
@@ -822,7 +836,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -848,13 +862,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -873,8 +887,8 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: 0;
+        padding-right: 0;
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -884,8 +898,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -1025,6 +1039,13 @@ h4 {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .social {
+        display: flex;
+        padding-left: 40px;
+    }
+    .text-center__text {
+        width: 88%;
     }
 }
 
