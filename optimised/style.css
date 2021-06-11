@@ -285,14 +285,26 @@ a:hover {
     padding-left: 0;
 }
 
-#bloc-1-hero h1 {
+#bloc-1-hero h1, #bloc-6 h1 {
     font-size: 55px;
     font-weight: 800;
+    text-align: center;
 }
 
 .navbar {
     margin-bottom: 0;
     z-index: 1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
 }
 
 .navbar-brand {
@@ -363,6 +375,37 @@ a:hover {
     float: right;
     position: relative;
     z-index: 2;
+}
+
+#bloc-6 p {
+    width: 45%;
+    font-size: 22px;
+}
+
+label {
+    font-size: 22px;
+}
+
+.col-sm-6>p {
+    text-align: end;
+    font-weight: 800;
+}
+.portfolio {
+    text-align: center!important;
+    font-weight: 500!important;
+}
+.img-responsive {
+    width: 270px;
+    height: 270px;
+    margin: auto;
+}
+.image-resize-mode {
+    width: 100px;
+    height: 100px;
+}
+.logoagence {
+    width: 268px;
+    height: auto;
 }
 
 @media (min-width: 768px) {
@@ -470,6 +513,10 @@ button {
 .btn-rd {
     border-radius: 40px;
 }
+.btn-group-lg>.btn, .btn-lg {
+    font-size: 25px;
+    padding: 15px 25px;
+}
 
 .btn-clean {
     border: 1px solid rgba(0, 0, 0, .08);
@@ -480,10 +527,20 @@ button {
 
 .icon-md {
     font-size: 30px!important;
+    color: transparent;
+}
+.icon-md>p {
+    color: transparent!important;
 }
 
 .icon-lg {
     font-size: 80px!important;
+}
+
+.img-responsive {
+    width: 270px;
+    height: 270px;
+    margin: auto;
 }
 
 .sm-shadow {
@@ -695,6 +752,7 @@ p {
     margin: auto auto auto auto;
 }
 
+/*
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
@@ -886,6 +944,18 @@ h2 {
         overflow-x: hidden;
         position: relative;
     }
+    #bloc-6 p{
+        width: 90%;
+        font-size: 18px;
+    }
+    #bloc-7 {
+        padding: 0 10px 0 10px;
+    }
+    #bloc-7 p{
+        text-align: center;
+        font-weight: 600;
+        font-size: 16px;
+    }
     .bloc {
         padding-left: 0;
         padding-right: 0;
@@ -1040,9 +1110,12 @@ h2 {
         width: 180px;
         height: 320px;
     }
+    
     .social {
+        max-width: 300px;
+        margin: auto;
         display: flex;
-        padding-left: 40px;
+        justify-content: space-between
     }
     .text-center__text {
         width: 88%;
@@ -1060,4 +1133,5 @@ h2 {
     .bloc-mob-center-text {
         text-align: center;
     }
+    
 }
